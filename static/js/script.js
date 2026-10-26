@@ -3,6 +3,8 @@
     'use strict';
 
     const STORAGE_KEY = 'mindpleasant_entries';
+    // index.html está en la raíz; las demás páginas viven en static/html/
+    const HTML_DIR = document.body.getAttribute('data-page') === 'emocion' ? 'static/html/' : '';
 
     // Emociones disponibles (en el orden de la pantalla de selección) con su categoría
     const EMOTIONS = [
@@ -143,7 +145,7 @@
             else entries.push(entry);
             entries.sort(function(a, b) { return a.date.localeCompare(b.date); });
             saveEntries(entries);
-            window.location.href = 'static/html/analisis.html?id=' + encodeURIComponent(entry.id);
+            window.location.href = HTML_DIR + 'analisis.html?id=' + encodeURIComponent(entry.id);
         });
     }
 
@@ -182,7 +184,7 @@
             link.className = 'day-link';
             link.textContent = 'ver resumen';
             link.addEventListener('click', function() {
-                window.location.href = 'static/html/analisis.html?id=' + encodeURIComponent(en.id);
+                window.location.href = HTML_DIR + 'analisis.html?id=' + encodeURIComponent(en.id);
             });
 
             day.appendChild(date);
