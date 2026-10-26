@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MindPleasant - Selecciona una emoción</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body data-page="emocion">
+    <header class="site-header">
+        <a class="logo" href="index.html">
+            <svg viewBox="0 0 64 56" aria-hidden="true"><path d="M32 2c-5 0-9 3-10 7-5 0-9 4-9 9 0 2 .6 3.800 1.600 5.300C11 24.500 9 27.500 9 31c0 4.500 3 8 7 9 .5 5 4.500 8 9 8 2.800 0 5.300-1.200 7-3 1.700 1.800 4.200 3 7 3 4.500 0 8.500-3 9-8 4-1 7-4.500 7-9 0-3.500-2-6.500-5.600-8.700C50.400 21.800 51 20 51 18c0-5-4-9-9-9-1-4-5-7-10-7zm-1.500 6v40M33.500 8v40" /></svg>
+            <span>MindPleasant</span>
+        </a>
+        <nav class="site-nav">
+            <a href="index.html" class="active">Emoción</a>
+            <a href="static/html/timeline.html">Línea de tiempo</a>
+            <a href="static/html/premium.html">Premium</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Selecciona una emoción</h1>
+
+        <section class="box picker-box">
+            <div id="emoji-grid" class="emoji-grid" role="radiogroup" aria-label="Emociones"></div>
+        </section>
+
+        <section class="box note-box">
+            <h2><label for="note">Ingresa una nota sobre esa emoción</label></h2>
+            <textarea id="note" maxlength="500"></textarea>
+        </section>
+
+        <button id="save-btn" class="btn" type="button">Enviar y guardar</button>
+        <p id="msg" class="message" role="status"></p>
+    </main>
+
+    <script src="static/js/script.js"></script>
+</body>
+
+</html>

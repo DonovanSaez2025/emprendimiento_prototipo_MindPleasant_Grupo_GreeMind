@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+:root {
+    --purple-top: #3a0ca3;
+    --purple-bottom: #1d0a4f;
+    --blue-top: #0072ab;
+    --blue-bottom: #00395e;
+    --yellow: #ffee00;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Lilita One', 'Trebuchet MS', sans-serif;
+    color: var(--white);
+    background: linear-gradient(180deg, var(--blue-top) 0%, var(--blue-bottom) 100%) fixed;
+    min-height: 100vh;
+    letter-spacing: 0.3px;
+}
+
+
+/* ---------- Header ---------- */
+
+.site-header {
+    background: linear-gradient(180deg, var(--purple-top) 0%, var(--purple-top) 45%, var(--purple-bottom) 45%, var(--purple-bottom) 100%);
+    border-bottom: 2px solid var(--white);
+    padding: 8px 16px;
+    text-align: center;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 2.6rem;
+    line-height: 1;
+}
+
+.logo svg {
+    width: 58px;
+    height: 52px;
+    fill: var(--white);
+}
+
+.logo span {
+    font-size: 2.6rem;
+}
+
+.site-nav {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    padding: 6px 0 2px;
+    font-size: 1rem;
+}
+
+.site-nav a {
+    color: #cfd8ff;
+    text-decoration: none;
+    padding: 2px 8px;
+    border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+    color: var(--white);
+    border-bottom-color: var(--yellow);
+}
+
+
+/* ---------- Layout ---------- */
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 14px 16px 50px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.4rem;
+    font-weight: normal;
+    margin-bottom: 14px;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, .35);
+}
+
+.box {
+    background: var(--black);
+    border: 2px solid var(--white);
+    padding: 16px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--black);
+    color: var(--white);
+    border: 2px solid var(--white);
+    font-family: inherit;
+    font-size: 1.5rem;
+    padding: 10px 14px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform .12s, background .12s;
+}
+
+.btn:hover {
+    background: #1c1c1c;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-small {
+    font-size: 1rem;
+    padding: 6px 8px;
+}
+
+.message {
+    min-height: 1.4em;
+    margin-top: 10px;
+    color: var(--yellow);
+    font-size: 1.1rem;
+}
+
+
+/* ---------- Emotion picker ---------- */
+
+.emoji-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px 16px;
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 6px;
+}
+
+.emoji-btn {
+    background: transparent;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    font-size: 2.1rem;
+    line-height: 1;
+    width: 54px;
+    height: 54px;
+    cursor: pointer;
+    transition: transform .12s, border-color .12s;
+}
+
+.emoji-btn:hover {
+    transform: scale(1.18);
+}
+
+.emoji-btn.selected {
+    border-color: var(--yellow);
+    transform: scale(1.2);
+    background: rgba(255, 238, 0, .15);
+}
+
+.picker-box {
+    max-width: 640px;
+    margin: 0 auto 28px;
+}
+
+.note-box {
+    max-width: 700px;
+    margin: 0 auto 28px;
+    padding: 10px 16px 14px;
+}
+
+.note-box h2 {
+    font-size: 1.9rem;
+    font-weight: normal;
+    margin-bottom: 6px;
+}
+
+.note-box textarea {
+    width: 100%;
+    min-height: 56px;
+    resize: vertical;
+    background: transparent;
+    color: var(--white);
+    border: 0;
+    border-bottom: 1px solid var(--white);
+    font-family: inherit;
+    font-size: 1.2rem;
+    padding: 6px 2px;
+    outline: none;
+}
+
+.note-box textarea:focus {
+    border-bottom-color: var(--yellow);
+}
+
+
+/* ---------- Premium ---------- */
+
+.premium {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.crown {
+    width: min(420px, 90%);
+}
+
+.premium-info {
+    max-width: 480px;
+}
+
+.premium-title {
+    font-size: 2.8rem;
+    font-weight: normal;
+    color: var(--yellow);
+    -webkit-text-stroke: 2px #000;
+    paint-order: stroke fill;
+    text-shadow: 3px 3px 0 #000;
+    margin-bottom: 10px;
+}
+
+.premium-info h2,
+.premium-info li {
+    color: var(--yellow);
+    font-weight: normal;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 0 #000;
+}
+
+.premium-info ul {
+    list-style: none;
+    margin: 4px 0 20px;
+}
+
+.premium-info li::before {
+    content: '- ';
+}
+
+.btn-buy {
+    color: var(--yellow);
+    border: 2px solid var(--yellow);
+    background: #1a1a00;
+    font-size: 1.4rem;
+    margin-left: 40px;
+}
+
+.btn-buy:hover {
+    background: #2e2e00;
+}
+
+
+/* ---------- Timeline ---------- */
+
+.timeline-scroll {
+    overflow-x: auto;
+    border: 2px solid var(--white);
+    background: var(--black);
+    margin-top: 40px;
+    padding-bottom: 6px;
+}
+
+.timeline-scroll::-webkit-scrollbar {
+    height: 14px;
+}
+
+.timeline-scroll::-webkit-scrollbar-track {
+    background: #000;
+}
+
+.timeline-scroll::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 10px;
+}
+
+.timeline {
+    display: flex;
+    width: max-content;
+}
+
+.day {
+    width: 150px;
+    border-right: 2px solid var(--white);
+    display: flex;
+    flex-direction: column;
+}
+
+.day:last-child {
+    border-right: 0;
+}
+
+.day-date {
+    background: var(--black);
+    border-bottom: 2px solid var(--white);
+    font-size: 1.25rem;
+    padding: 4px 0;
+}
+
+.day-emoji {
+    font-size: 3.6rem;
+    padding: 26px 0;
+    background: #000;
+}
+
+.day-link {
+    background: var(--black);
+    color: var(--white);
+    border: 0;
+    border-top: 2px solid var(--white);
+    font-family: inherit;
+    font-size: 1.1rem;
+    padding: 4px 0;
+    cursor: pointer;
+}
+
+.day-link:hover {
+    background: #222;
+    color: var(--yellow);
+}
+
+.empty {
+    padding: 30px;
+    font-size: 1.3rem;
+}
+
+
+/* ---------- Analysis ---------- */
+
+.emotion-line {
+    font-size: 1.1rem;
+    margin-bottom: 14px;
+}
+
+.emotion-line .emoji {
+    font-size: 1.6rem;
+    vertical-align: middle;
+}
+
+.analysis-box {
+    max-width: 600px;
+    margin: 0 auto 22px;
+    padding: 16px 20px;
+    font-size: 1.35rem;
+    line-height: 1.35;
+}
+
+.user-note {
+    max-width: 600px;
+    margin: -8px auto 18px;
+    font-size: 1rem;
+    color: #cfe6ff;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.actions .btn-contact {
+    font-size: 1.05rem;
+    max-width: 200px;
+}
+
+
+/* ---------- Modal ---------- */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    z-index: 10;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--black);
+    border: 2px solid var(--white);
+    max-width: 480px;
+    padding: 22px;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.modal-content h3 {
+    font-weight: normal;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+    color: var(--yellow);
+}
+
+.modal-content p {
+    margin-bottom: 10px;
+}
+
+.modal-content .btn {
+    margin-top: 8px;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 600px) {
+    .logo,
+    .logo span {
+        font-size: 2rem;
+    }
+    h1 {
+        font-size: 1.9rem;
+    }
+    .premium-title {
+        font-size: 2.2rem;
+    }
+    .btn-buy {
+        margin-left: 0;
+    }
+    .emoji-btn {
+        font-size: 1.8rem;
+        width: 46px;
+        height: 46px;
+    }
+}

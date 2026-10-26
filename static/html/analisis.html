@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MindPleasant - Análisis completo</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body data-page="analisis">
+    <header class="site-header">
+        <a class="logo" href="index.html">
+            <svg viewBox="0 0 64 56" aria-hidden="true"><path d="M32 2c-5 0-9 3-10 7-5 0-9 4-9 9 0 2 .6 3.800 1.600 5.300C11 24.500 9 27.500 9 31c0 4.500 3 8 7 9 .5 5 4.500 8 9 8 2.800 0 5.300-1.200 7-3 1.700 1.800 4.200 3 7 3 4.500 0 8.500-3 9-8 4-1 7-4.500 7-9 0-3.500-2-6.500-5.600-8.700C50.400 21.800 51 20 51 18c0-5-4-9-9-9-1-4-5-7-10-7z" /></svg>
+            <span>MindPleasant</span>
+        </a>
+        <nav class="site-nav">
+            <a href="index.html">Emoción</a>
+            <a href="static/html/timeline.html">Línea de tiempo</a>
+            <a href="static/html/premium.html">Premium</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Análisis completo</h1>
+        <p class="emotion-line">Emoción: <span id="emotion" class="emoji">😐</span></p>
+
+        <div id="analysis" class="box analysis-box">Cargando análisis...</div>
+        <p id="user-note" class="user-note"></p>
+
+        <div class="actions">
+            <button id="contact-btn" class="btn btn-small btn-contact" type="button">Contactar con un psicólogo profesional</button>
+            <a class="btn" href="index.html">Continuar</a>
+        </div>
+    </main>
+
+    <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <h3 id="modal-title">Apoyo profesional</h3>
+            <p>Hablar con un profesional puede ayudarte. Si estás en Chile, puedes llamar a <strong>Salud Responde: 600 360 7777</strong>.</p>
+            <p>Si sientes que estás en peligro o piensas en hacerte daño, llama al <strong>*4141</strong> (Línea de Prevención del Suicidio, gratuita, 24 horas) o acude al servicio de urgencias más cercano.</p>
+            <p>Con Mentalidad Premium tendrás acceso a mejores contactos con psicólogos.</p>
+            <button id="modal-close" class="btn" type="button">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
